@@ -56,7 +56,7 @@ theme = "forty"
       url = "blogs/RStudio"
 
     [[params.navigation.links]]
-      name = "Friends and travel"
+      name = "Friends and Travel"
       url = "#"
 
 #    [[params.navigation.links]]
@@ -97,7 +97,7 @@ theme = "forty"
     
     [[params.tiles.showcase]]
       title = "About me"
-      subtitle = "Free time"
+      subtitle = "My background and Hobbies"
       image = "pic01.jpg"
       url = "blogs/Aboutme"
 
@@ -109,12 +109,12 @@ theme = "forty"
       
       [[params.tiles.showcase]]
       title = "R Studio"
-      subtitle = "Project completed throughout Data Analytics Course"
+      subtitle = "Example of a project completed throughout Data Analytics Course"
       image = "pic03.jpg"
       url = "blogs/RStudio"
 
     [[params.tiles.showcase]]
-      title = "Friends and travel"
+      title = "Friends and Travel"
       subtitle = "A collection of recent memories and trips with friends"
       image = "pic04.jpg"
       url = "#"
