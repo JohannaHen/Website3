@@ -142,8 +142,8 @@ theme = "forty"
   # Section Type Two
   [params.two]
     enable = true
-    title = "Thats it!"
-    subtitle = """In case you are interested to learn more about me, please feel free to reach out either via mail or any other channel that is convenient for you!"""
+    title = "Thank you for visiting!"
+    subtitle = """Please reach out if you are interested to get in touch further!"""
     buttonText = "Back to Top!"
     #url = "blogs"
 
