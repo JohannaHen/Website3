@@ -99,7 +99,7 @@ theme = "forty"
       title = "About me"
       subtitle = "My background and Hobbies"
       image = "pic01.jpg"
-      url = "blogs/Aboutme"
+      url = "blogs/aboutme"
 
     [[params.tiles.showcase]]
       title = "CV"
