@@ -48,8 +48,8 @@ theme = "forty"
       url = "blogs/aboutme"
       
     [[params.navigation.links]]
-      name = "CV"
-      url = "blogs/cv"  
+      name = "Curriculum Vitae"
+      url = "blogs/CV"  
 
     [[params.navigation.links]]
       name = "R Studio"
