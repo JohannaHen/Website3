@@ -49,7 +49,7 @@ theme = "forty"
       
     [[params.navigation.links]]
       name = "Curriculum Vitae"
-      url = "blogs/CV"  
+      url = "blogs/cv"  
 
     [[params.navigation.links]]
       name = "R Studio"
@@ -105,7 +105,7 @@ theme = "forty"
       title = "CV"
       subtitle = "Academic and Work Experience"
       image = "pic02.jpg"
-      url = "blogs/CV"
+      url = "blogs/cv"
       
       [[params.tiles.showcase]]
       title = "R Studio"
