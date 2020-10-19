@@ -48,8 +48,8 @@ theme = "forty"
       url = "blogs/aboutme"
       
     [[params.navigation.links]]
-      name = "Curriculum Vitae"
-      url = "blogs/cv"  
+      name = "CV"
+      url = "blogs/CV"  
 
     [[params.navigation.links]]
       name = "R Studio"
@@ -57,7 +57,7 @@ theme = "forty"
 
     [[params.navigation.links]]
       name = "Friends and Travel"
-      url = "#"
+      url = "blogs/friendsandtravel"
 
 #    [[params.navigation.links]]
 #      name = "Elements"
@@ -105,7 +105,7 @@ theme = "forty"
       title = "CV"
       subtitle = "Academic and Work Experience"
       image = "pic02.jpg"
-      url = "blogs/cv"
+      url = "blogs/CV"
       
       [[params.tiles.showcase]]
       title = "R Studio"
