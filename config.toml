@@ -117,7 +117,7 @@ theme = "forty"
       title = "Friends and Travel"
       subtitle = "A collection of recent memories and trips with friends"
       image = "pic04.jpg"
-      url = "#"
+      url = "blogs/friends"
 
     #[[params.tiles.showcase]]
     #  title = "Consequat"
