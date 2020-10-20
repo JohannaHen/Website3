@@ -5,16 +5,14 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta name="description" content="MFA Student at LBS">
+	<meta name="description" content="MFA21 Student">
 	<meta name="author" content="Johanna Henriksson">
 	<meta name="generator" content="Hugo 0.75.1" />
-	<title>Magna &middot; Johanna</title>
+	<title>Aliquam &middot; Johanna</title>
 	<!-- Stylesheets -->
 	
 	<link rel="stylesheet" href="/css/main.css"/>
 	
-	
-
 	
 
 	<!-- Custom Fonts -->
@@ -40,7 +38,7 @@
 
             <!-- Header -->
     <header id="header" class="alt">
-        <a href="/" class="logo"><strong>Forty</strong> <span>By HTML5 Up</span></a>
+        <a href="/" class="logo"><strong>Johanna</strong> </a>
         <nav>
             <a href="#menu">Menu</a>
         </nav>
@@ -52,20 +50,9 @@
             
                 <li><a href="/">Home</a></li>
             
-                <li><a href="/blogs">Blogs</a></li>
+                <li><a href="/blogs/RStudio">RStudio</a></li>
             
-                <li><a href="/blogs/ipsum">Generic Blog</a></li>
-            
-                <li><a href="/elements.html">Elements</a></li>
-            
-
-        </ul>
-        <ul class="actions vertical">
-            
-                <li><a href="https://www.linkedin.com/in/johanna-henriksson-5b607314b/" class="button special fit">linkedin</a></li>
-            
-            
-                <li><a href="/" class="button fit">Log In</a></li>
+       
             
         </ul>
     </nav>
@@ -77,40 +64,136 @@
                     <section id="one">
                         <div class="inner">
                             <header class="major">
-                                <h1>Magna</h1>
+                                <h1>Example of a past assignemnt in R on Trump's Approval Margins</h1>
                             </header>
                             
-                                <span class="image main"><img src="/img/blogs/pic09.jpg" alt="" /></span>
+                                <span class="image main"><img src="/img/blogs/pic15.jpg" alt="" /></span>
                             
-                            
-                        </div>
+<div id="trumps-approval-margins" class="section level1">
+<h1>Homework Asssignment 2 on Trump’s Approval Margins</h1>
+<p>fivethirtyeight.com has detailed data on Trump's approval margins <a href="https://projects.fivethirtyeight.com/trump-approval-ratings"> here</a></p>
+<pre class="r"><code># Import approval polls data
+approval_polllist &lt;- read_csv(here::here(&#39;data&#39;, &#39;approval_polllist.csv&#39;))
+
+glimpse(approval_polllist)</code></pre>
+## Rows: 15,717
+## Columns: 22
+## $ president           &lt;<chr>&gt; &quot;Donald Trump&quot;, &quot;Donald Trump&quot;, &quot;Donald Trump&quot;, &quot;…
+## $ subgroup            &lt;<chr>&gt; &quot;All polls&quot;, &quot;All polls&quot;, &quot;All polls&quot;, &quot;All polls…
+## $ modeldate           &lt;<chr>&gt; &quot;10/4/2020&quot;, &quot;10/4/2020&quot;, &quot;10/4/2020&quot;, &quot;10/4/2020…
+## $ startdate           &lt;<chr>&gt; &quot;1/20/2017&quot;, &quot;1/20/2017&quot;, &quot;1/20/2017&quot;, &quot;1/21/2017…
+## $ enddate             &lt;<chr>&gt; &quot;1/22/2017&quot;, &quot;1/22/2017&quot;, &quot;1/24/2017&quot;, &quot;1/23/2017…
+## $ pollster            &lt;<chr>&gt; &quot;Gallup&quot;, &quot;Morning Consult&quot;, &quot;Ipsos&quot;, &quot;Gallup&quot;, &quot;…
+## $ grade               &lt;<chr>&gt; &quot;B&quot;, &quot;B/C&quot;, &quot;B-&quot;, &quot;B&quot;, &quot;B&quot;, &quot;B+&quot;, &quot;C+&quot;, &quot;B-&quot;, &quot;B&quot;…
+## $ samplesize          &lt;<dbl>&gt; 1500, 1992, 1632, 1500, 1500, 1190, 1500, 1651, 1…
+## $ population          &lt;<chr>&gt; &quot;a&quot;, &quot;rv&quot;, &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;rv&quot;, &quot;lv&quot;, &quot;a&quot;, &quot;rv&quot;, …
+## $ weight              &lt;<dbl>&gt; 0.262, 0.680, 0.153, 0.243, 0.227, 1.514, 0.200, …
+## $ influence           &lt;<dbl>&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+## $ approve             &lt;<dbl>&gt; 45.0, 46.0, 42.1, 45.0, 46.0, 36.0, 57.0, 42.3, 4…
+## $ disapprove          &lt;<dbl>&gt; 45.0, 37.0, 45.2, 46.0, 45.0, 44.0, 43.0, 45.8, 4…
+## $ adjusted_approve    &lt;<dbl>&gt; 45.7, 45.4, 43.2, 45.7, 46.7, 37.6, 51.6, 43.4, 4…
+## $ adjusted_disapprove &lt;<dbl>&gt; 43.6, 38.2, 43.8, 44.6, 43.6, 42.8, 44.5, 44.4, 4…
+## $ multiversions       &lt;<chr>&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+## $ tracking            &lt;<lgl>&gt; TRUE, NA, TRUE, TRUE, TRUE, NA, TRUE, TRUE, NA, N…
+## $ url                 &lt;<chr>&gt; &quot;http://www.gallup.com/poll/201617/gallup-daily-t…
+## $ poll_id             &lt;<dbl>&gt; 49253, 49249, 49426, 49262, 49236, 49260, 49266, …
+## $ question_id         &lt;<dbl>&gt; 77265, 77261, 77599, 77274, 77248, 77272, 77278, …
+## $ createddate         &lt;<chr>&gt; &quot;1/23/2017&quot;, &quot;1/23/2017&quot;, &quot;3/1/2017&quot;, &quot;1/24/2017&quot;…
+## $ timestamp           &lt;<chr>&gt; &quot;14:56:06  4 Oct 2020&quot;, &quot;14:56:06  4 Oct 2020&quot;, &quot;…
+
+
+<div id="create-a-plot" class="section level2">
+<h2>Average Trump Approval Rate over Time</h2>
+<p>We would like to calculate the average net approval rate (approve- disapprove) for each week since he got into office. We plot the net approval, along with its 95% confidence interval.</p>
+<pre class="r"><code>approval_polllist %&gt;%
+#clean data
+  mutate(net_approval = approve - disapprove,
+         enddate = mdy(enddate),
+         week = week(enddate),
+         year = year(enddate),
+         year_cha = paste(as.character(year))) %>%
+  
+  #calculate SD and CI
+  group_by(year, week) %>%
+  mutate(average_net_approval_week = mean(net_approval)) %>%
+  mutate(sd_approval = sd(net_approval) / sqrt(count(week)-1),
+         upper = average_net_approval_week + 1.96 * sd_approval,
+         lower = average_net_approval_week - 1.96 * sd_approval)
+
+glimpse(approvalrate)
+
+#plot
+ggplot(approvalrate, aes(x = week, y = average_net_approval_week)) +
+  geom_line(aes(colour = year_cha)) +
+  
+  #upper and lower line
+  geom_line(aes(y = upper, colour = year_cha)) +
+  geom_line(aes(y = lower, colour = year_cha)) +
+  
+  #y=0 line
+  geom_hline(yintercept = 0, colour = &quot;orange&quot;) +
+  geom_point(size = 1, aes(colour = year_cha)) +
+  geom_ribbon(alpha = 0.2,
+              aes(ymin = lower, ymax = upper, fill = year_cha)) +
+  
+  #facet by year
+  facet_wrap(~year,
+             scales = &quot;fixed&quot;,
+             ncol = 2) +
+  
+  #scale_fill_manual(values=c(&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;purple&quot;)) +  # unnecessary since the random fill is exactly what we need
+  scale_x_continuous(breaks = seq(0,52,13)) +
+  scale_y_continuous(breaks = seq(-20,7.5,2.5)) +
+  
+  theme_bw() +
+  theme(legend.position = &quot;none&quot;) +
+  labs (
+    title = &quot;Estimating Net Approval (approve-disapprove) for Donald Trump&quot;,
+    x     = &quot;Week of the year&quot;,
+    y     = &quot;Average Net Approval (%)&quot;,
+    subtitle = &quot;Weekly average of all polls&quot;
+  )
+
+approvalrate %>%
+  filter(year == 2020, week == 15 | week == 34) %>% 
+  summarise(mean(upper), mean(lower))
+  
+</code></pre>
+<span class="image main"><img src="/img/blogs/pic16.jpg" alt="" /></span>
+</div>
+<div id="compare-confidence-intervals" class="section level2">
+<h2>Comparing Data Confidence Intervals</h2>
+
+<p>In early-mid April (week 15), unlike its European counterparts, the US was only at the beginning of the growing wave of covid-19 cases clustered priomarily in NYC. However, by the end of August (week 34) there were far more cases and deaths recorded across the country together with the job losses. Moreover, the summer highlighted the persistent social issue of the America with the Black Lives Matter protests that Trump neglected. These reasons may explain a mucher greater discrepancy in the opinions of the respondents that in turn led to a larger standard error in net approvals and therefore CI expanding from ca. 1.33% to 3.08%.</p>
+</div>
+</div>
+
+                       </div>
                     </section>
             <!-- Disqus Inject -->
                 
             </div>
             
         <!-- Footer -->
-            
+          
                 <!-- Footer -->
     <footer id="footer">
         <div class="inner">
             <ul class="icons">
                 
-                    <li><a href="https://www.twitter.com" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://twitter.com/johanna72596614" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
                 
-                    <li><a href="https://www.facebook.com" class="icon alt fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://www.facebook.com/johannashenriksson/" class="icon alt fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
                 
-                    <li><a href="https://www.instagram.com" class="icon alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+                    <li><a href="https://www.instagram.com/johanna_sofia_henriksson" class="icon alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
                 
-                    <li><a href="https://www.github.com" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                    <li><a href="https://github.com/JohannaHen" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
                 
-                    <li><a href="https://www.linkedin.com" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/johanna-henriksson-5b607314b/" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
                 
             </ul>
             <ul class="copyright">
-                <li>&copy; Company Name</li>
-                
-                <li>Design:  <a href="https://www.html5up.net">HTML5 UP</a></li>
+                <li>&copy; Johanna Henriksson, MFA21</li>
                 
             </ul>
         </div>
