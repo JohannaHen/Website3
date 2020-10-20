@@ -106,7 +106,7 @@ theme = "forty"
       subtitle = "Academic and Work Experience"
       image = "pic02.jpg"
       url = "blogs/cv"
-      
+       
       [[params.tiles.showcase]]
       title = "R Studio"
       subtitle = "Example of a project completed throughout Data Analytics Course"
