@@ -44,7 +44,7 @@ theme = "forty"
     # logo = "logo.png"
 
     [[params.navigation.links]]
-      name = "About me"
+      name = "About Me"
       url = "blogs/aboutme"
       
     [[params.navigation.links]]
@@ -96,7 +96,7 @@ theme = "forty"
     # Display your showcases here.
     
     [[params.tiles.showcase]]
-      title = "About me"
+      title = "About Me"
       subtitle = "My background and Hobbies"
       image = "pic01.jpg"
       url = "blogs/aboutme"
